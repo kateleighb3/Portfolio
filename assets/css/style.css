@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: serif;
+    background-color: beige;
+ }
+
+header {
+    padding: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #333333;
+    color:#333333;
+}
+
+h1 {
+    display:block;
+    padding: 0 8px 0px 70px;
+    font-size: 36px;
+    background-color: lightblue;
+    position:absolute;
+    left:0;
+    top: 12px;
+}
+
+nav {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: lightblue;
+    padding: 14px 20px;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* About Section */
+
+section {
+    display: flex;
+    padding: 20px 10px;
+    width: 100%;
+    margin: 20px 0px;
+    border: 5px solid purple;
+}
+
+p{
+    display: block;
+    margin-left: 20px;
+    line-height: 2;
+}
+
+.section_title{
+    font-size: 30px;
+    text-align: right;
+    width: 25%;
+    border-right: 5px solid black;
+    padding: 10px;
+}
+
+.contents{
+    margin: 10px;
+    width: 73%;
+}
+
+
+  /*aside {
+    float: left;
+    width: 25%;
+    flex: 1;
+    margin-left: 50px;
+    padding: 20px;
+    border: 5px solid red;
+  }
+
+  section {
+    flex: 3;
+    padding: 20px;
+    dispaly: block;
+    border-left: solid black;
+  }
+  */
+
+  .main_image {
+    width: 100%;
+    height:200px;
+    margin-bottom:25px;
+    background-image: url("../images/cole-patrick-hpCHLFknc2s-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+
+
+
+
+
+
+  @media screen and (max-width: 700px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    main,
+    nav {
+      flex-direction: column;
+    }
+    /* Make the sidebar stack below the body */
+    .contents {
+      order: 2;
+    }
