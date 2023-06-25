@@ -9,29 +9,44 @@ body {
     background-color: beige;
  }
 
+/* HEADER AND NAVIGATION SECTION */
 header {
     padding: 35px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #333333;
     color:#333333;
+    border: 5px solid green;
+    position: relative;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 100%;
+  border: 5px solid purple;
 }
 
 h1 {
-    display:block;
     padding: 0 8px 0px 70px;
     font-size: 36px;
     background-color: lightblue;
-    position:absolute;
+    /* position:absolute;
     left:0;
-    top: 12px;
+    top: 12px; */
+    border: 5px solid red;
 }
 
 nav {
-    display: flex;
-    position: absolute;
+    /*position: absolute;
     top: 15px;
-    right: 5px;
+    right: 5px; */
     text-align: center;
+    padding-top: 10px;
+    border: 5px solid yellow;
   }
   
   nav a {
@@ -51,11 +66,34 @@ nav {
 /* About Section */
 
 section {
-    display: flex;
     padding: 20px 10px;
     width: 100%;
     margin: 20px 0px;
     border: 5px solid purple;
+}
+
+.container-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 5px solid brown;
+
+}
+
+.section_title{
+  font-size: 30px;
+  text-align: right;
+  width: 25%;
+  border-right: 5px solid black;
+  padding: 10px;
+  border: 8px solid red;
+}
+
+.contents{
+  margin: 10px;
+  width: 73%;
+  border: 5px solid yellow;
 }
 
 p{
@@ -64,18 +102,7 @@ p{
     line-height: 2;
 }
 
-.section_title{
-    font-size: 30px;
-    text-align: right;
-    width: 25%;
-    border-right: 5px solid black;
-    padding: 10px;
-}
 
-.contents{
-    margin: 10px;
-    width: 73%;
-}
 
 
   /*aside {
@@ -105,18 +132,40 @@ p{
   }
 
 
-
-
-
-
-
   @media screen and (max-width: 700px) {
     /* Use flex-direction to stack the navbar, sidebar, and body */
+    
     main,
-    nav {
+    .container-nav, 
+    .container-section {
       flex-direction: column;
+      text-align: center;
+    } 
+    
+    h1 {
+      padding: 0 8px 0px 8px;
+      font-size: 36px;
+      background-color: lightblue;
+      /* position:absolute;
+      left:0;
+      top: 12px; */
+      border: 5px solid red;
     }
+
+  nav a {
+    color: #333333;
+    font-weight: 900;
+  }
+
+  .section_title{
+    font-size: 30px;
+    text-align: center;
+    width: 25%;
+    padding: 10px;
+    border: 8px solid red;
+  }
     /* Make the sidebar stack below the body */
     .contents {
       order: 2;
     }
+}
