@@ -15,7 +15,10 @@ header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #333333;
     color:#333333;
-    border: 5px solid green;
+    padding: 15px; /*adjusts how much space header 
+    takes up around itself too; adjusts heigh in away; able to 
+    pull header up with elements inside still positioned 
+    as wanted*/
     /*position: relative;*/
 }
 
@@ -27,7 +30,6 @@ header {
   left: 0;
   top: 4px; */
   width: 100%;
-  border: 5px solid purple;
 }
 
 h1 {
@@ -38,16 +40,14 @@ h1 {
     left:0;
     top: 12px; */
     margin-left: -40px;
-    border: 5px solid red;
 }
 
 nav {
     text-align: center;
     padding-top: 10px;
-    border: 5px solid yellow;
   }
   
-  nav a {
+nav a {
     color: lightblue;
     padding: 14px 20px;
     text-decoration: underline;
@@ -55,7 +55,7 @@ nav {
     font-size: 20px;
   }
 
-  main {
+main {
     display: flex;
     flex-wrap: wrap;
 
@@ -63,21 +63,19 @@ nav {
 
 /* Hero Image Section */
 
-.main_image {
+.hero {
   width: 100%;
-  height:200px;
-  margin-bottom:25px;
+  height:250px;
+  margin-bottom:5px;
   background-image: url("../images/cole-patrick-hpCHLFknc2s-unsplash.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
-  border: 5px solid blue;
 }
 
 .container-cool-subtitle {
   display: inline;
   width: auto;
-  border: 5px solid orange;
   position: absolute;
   bottom: 20px;
   right: 35px;
@@ -87,10 +85,10 @@ h3 {
   font-size: 26px;
   background-color: lightblue;
   color: #333333;
-  border: 5px solid red;
 }
 
 /* About Section */
+
 
 section {
     padding: 20px 10px;
@@ -123,12 +121,77 @@ section {
   border: 5px solid yellow;
 }
 
-p{
+.one{
     display: block;
     margin-left: 20px;
     line-height: 2;
 }
 
+/* Work Section */
+
+.work-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  border: 5px solid rgb(5, 206, 22);
+}
+
+/*
+.card {
+  padding: 0;
+  width: auto;
+  text-align: center;
+  border: 5px solid blue;
+  margin: 10px;
+}
+*/
+
+.work-images-container a {
+  border: 5px solid aqua;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.work-images-tag {
+  padding: 10px;
+  position: absolute;
+  bottom: 20px;
+  background-color: aqua;
+  
+
+}
+
+h4 {
+  font-size: 20px;
+   color: #333333;
+   text-align: center;
+}
+
+.two {
+  font-size: 16px;
+  color: #333333;
+  text-align: left;
+}
+
+.surf-report {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /*background-image: url("../images/tatonomusic-FFCgotROOTY-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;*/
+}
+
+.flamingo, 
+.neon {
+  position: relative;
+  width: 50%;
+  height: 200px;
+  /*background-image: url("../images/IMG_0022.jpg");
+  background-position: center;
+  background-repeat: no-repeat;*/
+}
 
 
 
@@ -150,9 +213,21 @@ p{
   */
 
   
+  @media screen and (max-width: 1142px) {
+    .surf-report {
+      width: 100%;
+      height: 250px;
+      /*background-position: center; */
+  }
 
-
-  @media screen and (max-width: 700px) {
+  .led-wall {
+      width: 45%;
+      height: 200px;
+     /* background-position: center;
+      background-size: cover; */
+  } 
+}
+  @media screen and (max-width: 768px) {
     /* Use flex-direction to stack the navbar, sidebar, and body */
     
     main,
@@ -181,8 +256,29 @@ p{
     padding: 10px;
     border: 8px solid red;
   }
+
+  .surf-report {
+    height: 150px;
+}
+
+.led-wall{
+    height: 100px;
+}
     /* Make the sidebar stack below the body */
     .contents {
       order: 2;
     }
-}
+  }
+    @media screen and (max-width: 575px) {
+      .project-container a {
+        width: 100%;
+        padding: 0;
+      }
+      .surf-report {
+        height: 100px;
+    }
+
+    .led-wall {
+        height: 100px;
+    }
+    }
