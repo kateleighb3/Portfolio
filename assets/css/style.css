@@ -15,11 +15,7 @@ header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #333333;
     color:#333333;
-    padding: 15px; /*adjusts how much space header 
-    takes up around itself too; adjusts heigh in away; able to 
-    pull header up with elements inside still positioned 
-    as wanted*/
-    /*position: relative;*/
+    padding: 15px; 
 }
 
 .container-nav {
@@ -139,15 +135,6 @@ section {
   width: 100%;
 }
 
-/*
-.card {
-  padding: 0;
-  width: auto;
-  text-align: center;
-  border: 5px solid blue;
-  margin: 10px;
-}
-*/
 
 .work-images-container a {
   border: 5px solid aqua;
@@ -178,41 +165,41 @@ h4 {
   position: relative;
   width: 100%;
   height: 500px;
-  /*background-image: url("../images/tatonomusic-FFCgotROOTY-unsplash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;*/
 }
 
-.flamingo, 
-.neon, .plants, .mts {
+.card {
   position: relative;
   width: 47%;
   height: 200px;
-  /*background-image: url("../images/IMG_0022.jpg");
-  background-position: center;
-  background-repeat: no-repeat;*/
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
 }
 
 
-
-  /*aside {
-    float: left;
-    width: 25%;
-    flex: 1;
-    margin-left: 50px;
-    padding: 20px;
-    border: 5px solid red;
-  }
-
-  section {
-    flex: 3;
-    padding: 20px;
-    dispaly: block;
-    border-left: solid black;
-  }
-  */
-
-  
   @media screen and (max-width: 1142px) {
     .surf-report {
       width: 100%;
@@ -220,7 +207,7 @@ h4 {
       /*background-position: center; */
   }
 
-  .flamingo, .neon, .plants, .mts  {
+  .card  {
       width: 50%;
       height: 200px;
      /* background-position: center;
@@ -231,7 +218,7 @@ h4 {
 
 @media screen and (max-width: 900px) {
 
-  .flamingo, .neon, .plants, .mts  {
+  .card {
     height: 100px;
   }
 
@@ -265,24 +252,28 @@ h4 {
   .section_title{
     font-size: 30px;
     text-align: center;
-    width: 25%;
+    width: auto;
     padding: 10px;
     border: none;
-    
+  }
+
+  .contents{
+    text-align: center;
+    width: auto;
   }
 
   .surf-report {
     height: 150px;
 }
 
-.flamingo, .neon, .plants, .mts  {
+.card  {
     height: 100px;
 }
     /* Make the sidebar stack below the body */
     .contents {
       order: 2;
     }
-  }
+
     @media screen and (max-width: 575px) {
       .project-container a {
         width: 100%;
@@ -292,7 +283,8 @@ h4 {
         height: 100px;
     }
 
-    .flamingo, .neon, .plants, .mts  {
+    .card  {
         height: 100px;
     }
     }
+  }
